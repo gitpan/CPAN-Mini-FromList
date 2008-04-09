@@ -8,16 +8,11 @@ use Data::Dumper;
 use File::Spec::Functions;
 use base qw(CPAN::Mini);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
-CPAN::Mini::FromList - create a minimal mirror of CPAN containing
-only modules you specify
-
-=head1 VERSION
-
-Version 0.01
+CPAN::Mini::FromList - create a minimal CPAN mirror of modules you specify
 
 =head1 SYNOPSIS
 
@@ -31,45 +26,13 @@ at C<minicpan-fromlist>.
 
 =head1 METHODS
 
+=cut
+
 =head2 update_mirror %args
 
 Begins the process of creating a local CPAN mirror, but only downloads   
-modules specified by the user.  See the documentation in CPAN::Mini for 
+modules specified by the user. See the documentation in CPAN::Mini for 
 more details on the arguments.
-
-=head1 AUTHOR
-
-Thomas Klausner, C<< domm@cpan.org >>
-
-based on CPAN::Mini::Phalanx100 by Steve Peters
-
-=head1 BUGS
-
-Please report any bugs or feature requests to
-C<bug-cpan-mini-fromlist@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll automatically
-be notified of progress on your bug as I make changes.
-
-=head1 SEE ALSO
-
-L<CPAN::Mini>
-
-L<CPAN::Dependencies>
-
-=head1 ACKNOWLEDGEMENTS
-
-Thanks to...
-
-Ricardo Signes - for writing  L<CPAN::Mini>, which does 99% of the work in this module
-
-Steve Peters - for writing CPAN::Mini::Phalanx100, from which I copied most of this code
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Thomas Klausner, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
 
 =cut
 
@@ -147,5 +110,43 @@ EOHEAD
 
 q{  listening to:
     CPAN discussions at the Oslo QA Hackathon    
-}
+};
+
+__END__ 
+
+
+=head1 AUTHOR
+
+Thomas Klausner, C<< domm@cpan.org >>
+
+based on CPAN::Mini::Phalanx100 by Steve Peters
+
+=head1 BUGS
+
+Please report any bugs or feature requests to
+C<bug-cpan-mini-fromlist@rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org>.  I will be notified, and then you'll automatically
+be notified of progress on your bug as I make changes.
+
+=head1 SEE ALSO
+
+L<CPAN::Mini>
+
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to...
+
+Ricardo Signes - for writing  L<CPAN::Mini>, which does 99% of the work in this module
+
+Steve Peters - for writing CPAN::Mini::Phalanx100, from which I copied most of this code
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2008 Thomas Klausner, All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
+
 
