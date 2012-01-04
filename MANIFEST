@@ -1,10 +1,14 @@
-bin/minicpan-fromlist
 Build.PL
 Changes
-lib/CPAN/Mini/FromList.pm
+INSTALL
+LICENSE
 MANIFEST
-META.yml			# Will be created by "make dist"
+META.json
+META.yml
 README
+bin/minicpan-fromlist
+dist.ini
+lib/CPAN/Mini/FromList.pm
 t/00-load.t
 t/boilerplate.t
 t/pod-coverage.t

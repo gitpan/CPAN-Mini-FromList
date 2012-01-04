@@ -3,38 +3,16 @@ package CPAN::Mini::FromList;
 use warnings;
 use strict;
 
+our $VERSION = '0.04';
+# ABSTRACT: create a minimal CPAN mirror from a list of modules you specify
+
 use CPAN::Mini;
 use Data::Dumper;
 use File::Spec::Functions;
 use base qw(CPAN::Mini);
 
-our $VERSION = '0.02';
 
-=head1 NAME
 
-CPAN::Mini::FromList - create a minimal CPAN mirror of modules you specify
-
-=head1 SYNOPSIS
-
-Unless you need to do something unusual, you probably should be looking 
-at C<minicpan-fromlist>.
-
-    use CPAN::Mini::FromList;
-
-    CPAN::Mini::FromList->update_mirror(%args);
-    ...
-
-=head1 METHODS
-
-=cut
-
-=head2 update_mirror %args
-
-Begins the process of creating a local CPAN mirror, but only downloads   
-modules specified by the user. See the documentation in CPAN::Mini for 
-more details on the arguments.
-
-=cut
 
 our %dists = ();
 
@@ -56,11 +34,6 @@ sub _fromlist_filter {
    return 0;
 }
 
-=head3 delete_02packages
-
-Delete 02packages.details.txt.gz
-
-=cut
 
 sub delete_02packages {
     my ($class,$local)=@_;
@@ -70,12 +43,6 @@ sub delete_02packages {
     }
 }
 
-=head3 generate_fake_02packages
-
-Generate a fake 02packages.details.txt.gz containing only the packages
-listed.
-
-=cut
 
 sub generate_fake_02packages {
     my ($class,$local)=@_;
@@ -112,8 +79,48 @@ q{  listening to:
     CPAN discussions at the Oslo QA Hackathon    
 };
 
-__END__ 
 
+
+=pod
+
+=head1 NAME
+
+CPAN::Mini::FromList - create a minimal CPAN mirror from a list of modules you specify
+
+=head1 VERSION
+
+version 0.04
+
+=head1 SYNOPSIS
+
+Unless you need to do something unusual, you probably should be looking 
+at C<minicpan-fromlist>.
+
+    use CPAN::Mini::FromList;
+
+    CPAN::Mini::FromList->update_mirror(%args);
+    ...
+
+=head1 NAME
+
+CPAN::Mini::FromList - create a minimal CPAN mirror of modules you specify
+
+=head1 METHODS
+
+=head2 update_mirror %args
+
+Begins the process of creating a local CPAN mirror, but only downloads   
+modules specified by the user. See the documentation in CPAN::Mini for 
+more details on the arguments.
+
+=head3 delete_02packages
+
+Delete 02packages.details.txt.gz
+
+=head3 generate_fake_02packages
+
+Generate a fake 02packages.details.txt.gz containing only the packages
+listed.
 
 =head1 AUTHOR
 
@@ -147,6 +154,22 @@ Copyright 2008 Thomas Klausner, All Rights Reserved.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
+=head1 AUTHOR
+
+Thomas Klausner <domm@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Thomas Klausner.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
+
+__END__ 
+
+
 
 
