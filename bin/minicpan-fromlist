@@ -47,7 +47,7 @@ GetOptions(
            "generate_02" => \$config{generate_02},
           ) or pod2usage(2);
 
-pod2usage(2) unless $config{local_formlist} and $config{remote};
+pod2usage(2) unless $config{local_fromlist} and $config{remote};
 
 $|++;
 $config{dirmode} &&= oct($config{dirmode});
@@ -81,7 +81,7 @@ minicpan-fromlist - run CPAN::Mini::FromList
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

@@ -4,7 +4,7 @@
       "Thomas Klausner <domm@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200014, CPAN::Meta::Converter version 2.110440",
+   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
    "license" : [
       "perl_5"
    ],
@@ -31,7 +31,10 @@
             "File::Find::Rule" : 0,
             "File::Spec::Functions" : 0,
             "Getopt::Long" : 0,
-            "Pod::Usage" : 0
+            "Pod::Usage" : 0,
+            "base" : 0,
+            "strict" : 0,
+            "warnings" : 0
          }
       },
       "test" : {
@@ -44,10 +47,10 @@
    "resources" : {
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/domm/CPAN-Mini-FromList.git",
-         "web" : "http://github.com/domm/CPAN-Mini-FromList"
+         "url" : "git://github.com/sjn/CPAN-Mini-FromList.git",
+         "web" : "http://github.com/sjn/CPAN-Mini-FromList"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 
